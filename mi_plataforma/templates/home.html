@@ -1,0 +1,17 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="home-container">
+    <div class="welcome-text">
+        <h2>Bienvenido a la plataforma <span class="highlight">Argus</span></h2>
+        <p>Monitoreo y gestión centralizada con uso de tecnologia de analisis de datos.</p>
+        <a href="{% url 'users:login' %}" class="btn-primary">Iniciar sesion</a>
+    </div>
+
+    <div class="logo-card">
+        <img src="{% static 'img/logo.png' %}" alt="Logo Argus">
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Argus{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="{% static 'img/logo.png' %}" alt="Logo Argus">
+            
+        </div>
+        <ul class="nav-links">
+            <ul class="nav-links">
+                <li><a href="{% url 'home' %}"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="{% url 'users:login' %}"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                <li><a href="{% url 'users:registro' %}"><i class="fas fa-user-plus"></i> Registro</a></li>
+            </ul>
+        </ul>
+    </nav>
+</header>
+
+
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+
+<footer>
+    <p>&copy; 2025 Argus | Monitoreo y Gestión de Información</p>
+</footer>
+
+</body>
+</html>

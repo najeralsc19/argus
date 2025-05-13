@@ -1,0 +1,303 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F4F4F4;
+}
+
+/* Header y NavBar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #49217a;
+    padding: 15px 30px;
+    color: white;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #33cabe; /* Efecto hover con color de acento */
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #1E2A38;
+    color: white;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Contenedor central con mayor impacto */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px;
+    min-height: 70vh;
+}
+
+/* Título con efecto de color */
+.welcome-text h2 {
+    font-size: 32px;
+    color: #33cabe;
+}
+
+.highlight {
+    color: #963ac3;  /* Hace que "Argus" resalte */
+}
+
+/* Párrafo de introducción */
+.welcome-text p {
+    font-size: 18px;
+    color: #1E2A38;
+    margin-bottom: 20px;
+}
+
+/* Botón de acción */
+.btn-primary {
+    background-color: #33cabe;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #963ac3;
+    animation: bounce 0.3s ease-in-out;
+
+}
+
+@keyframes bounce {
+    0% { transform: scale(1); }
+    30% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+
+/* Card con el logo */
+.logo-card {
+    background-color: white;
+    padding: 25px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    margin-top: 25px;
+}
+
+.logo-card img {
+    width: 220px;  /* Ajuste del tamaño del logo */
+}
+
+.logo-card {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+nav ul li a {
+    transition: color 0.3s ease-in-out;
+}
+
+body {
+    animation: fadeBackground 1s ease-in-out;
+}
+
+@keyframes fadeBackground {
+    0% { background-color: #49217a; }
+    100% { background-color: #F4F4F4; }
+}
+
+/* Navbar general */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #49217a;
+    padding: 15px 30px;
+    color: white;
+}
+
+/* Logo y nombre */
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.nav-logo span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Links de navegación */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(51, 202, 190, 0.8); /* ✅ Transparencia para evitar que cubra el texto */
+}
+
+/* Responsividad: Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        padding-top: 10px;
+    }
+}
+
+/* Contenedor del login */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+/* Card del login */
+.login-card {
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    text-align: center;
+    width: 350px;
+}
+
+/* Mejoras en inputs */
+.login-card input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* Botón con mejor diseño */
+.btn-primary {
+    width: 45%;  /* 🔧 Se reduce el tamaño del botón */
+    max-width: 250px;  /* 🔧 Evita que se expanda demasiado */
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto;  /* 🔧 Centrado automático */
+}
+
+
+.btn-primary:hover {
+    background-color: #963ac3;
+}
+
+/* Footer del login */
+.login-footer {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-footer a {
+    color: #33cabe;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+}
+/* Contenedor del campo de entrada */
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 280px;
+    margin: 10px auto; /* 🔧 Esto centra los inputs */
+}
+
+/* Estilos de los inputs */
+.input-container input {
+    width: 100%;
+    padding: 10px 10px 10px 40px; /* 🔧 Espacio a la izquierda para el icono */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* Estilos de los iconos */
+.input-container i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #999;
+}
